@@ -1,0 +1,236 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0px 20px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    background: url(background.png);
+    color: #c5c6c7;
+}
+
+h2, h3, h4 {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #c5c6c7;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #66fcf1;
+    color: #66fcf1;
+}
+
+.divider {
+    height: 1px;
+    border-radius: 5px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    background-color: #c5c6c7;
+}
+
+.hidden {
+    display: none;
+}
+
+#projects::before, #resume::before, #contact::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -100px; 
+    height: 100px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
+
+/* Header */
+header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 60px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 0 8px black;
+    background-color: #0b0c10;
+}
+
+header div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div a {
+    margin-left: 40px;
+    font-size: 16px;
+}
+
+header div div {
+    justify-content: flex-start;
+}
+
+header div div a {
+    display: none;
+}
+
+header a {
+    color: #c5c6c7;
+}
+
+/* Nav */
+nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 90%;
+    height: 120px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    box-shadow: 0 0 8px black;
+    background-color: #0b0c10;
+}
+
+nav a {
+    margin-top: 20px;
+    color: #c5c6c7;
+}
+
+/* Body */
+main {
+    margin-top: 60px;
+}
+
+/* Home */
+#home {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#home .button {
+    margin-top: 24px;
+}
+
+/* Projects */
+#projects div {
+    height: 350px;
+    margin: 40px 0 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+#projects div article{
+    width: 280px;
+    border-radius: 5px;
+    margin-right: 7.5vw;
+    flex: 0 0 auto;
+    background-color: #1f2833;
+    box-shadow: 0 0 8px black;
+}
+
+#projects div article:last-child {
+    margin-right: 0;
+}
+
+#projects div article h3 {
+    margin-top: 20px;
+}
+
+
+/* Resume */
+#resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contact */
+#contact {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact h3 {
+    margin-bottom: 40px;
+}
+
+#contact div {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#contact div i {
+    margin-right: 10px;
+}
+
+#contact div a {
+    margin-right: 10px;
+    text-align: center;
+    color: #66fcf1;
+}
+
+@media screen and (min-width: 650px) {
+    header div div .material-icons {
+        display: none;
+    }
+
+    header div div a {
+        display: block;
+    }
+
+    header div div a:first-of-type {
+        margin-left: 0;
+    }
+
+    #projects div {
+        justify-content: center;
+    }
+
+    .divider {
+        width: 50%;
+        margin-left: 25%;
+    }
+}
